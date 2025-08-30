@@ -130,10 +130,6 @@ st.sidebar.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-if st.sidebar.button("Randomize Axes"):
-    st.session_state.xaxis, st.session_state.yaxis = random.sample(valid_nutrients, 2)
-    st.rerun()
-
 # Quadrant setting last
 st.sidebar.markdown("#### Advanced Options")
 stat_split = st.sidebar.radio("Quadrant split by:", ["Mean", "Median"])
