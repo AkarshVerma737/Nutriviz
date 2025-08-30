@@ -271,7 +271,7 @@ def suggest_similar_foods(df, food_name, X_scaled, top_n=None):
 # -----------------------------
 # Streamlit UI
 # -----------------------------
-st.title("🥗 Nutrient-Based Food Search")
+st.title("Nutrient-Based Food Search")
 
 col1, col2 = st.columns(2)
 with col1:
@@ -303,7 +303,7 @@ result_df = filter_by_dv(df, selected_nutrient, level)
 # -----------------------------
 # Display Results
 # -----------------------------
-st.subheader(f"📟 Products with {level} {selected_nutrient.replace('_', ' ').title()}")
+st.subheader(f"Products with {level} {selected_nutrient.replace('_', ' ').title()}")
 if result_df.empty:
     st.warning("No products found for this selection.")
 else:
@@ -316,7 +316,7 @@ else:
 # -----------------------------
 # Show GMM-Based Alternatives
 # -----------------------------
-st.subheader("🔁 GMM-Based Similar Food Suggestions")
+st.subheader("GMM-Based Similar Food Suggestions")
 selected_food = st.selectbox("Pick a Food Item to Find Similar Alternatives", df['name'].unique())
 alt_df = suggest_similar_foods(df, selected_food, X_scaled, top_n=None)
 # Show similar foods in scrollable full-height table
@@ -332,7 +332,7 @@ else:
 # ----------------------------------------
 # Disease-Friendly Search
 # ----------------------------------------
-st.subheader("🩺 Search by Health Condition")
+st.subheader("Search by Health Condition")
 
 disease_options = {v["name"]: k for k, v in health_criteria.items()}
 selected_disease = st.selectbox("Choose a Condition", list(disease_options.keys()))
@@ -341,7 +341,7 @@ if selected_disease:
     condition_key = disease_options[selected_disease]
     condition = health_criteria[condition_key]
 
-    st.markdown(f"**🔍 Criteria:** {condition['description']}")
+    st.markdown(f"**Criteria:** {condition['description']}")
 
     df_copy = df.copy()
 
@@ -364,7 +364,7 @@ if selected_disease:
     # Show results
     disease_results = df_copy.sort_values(by="disease_score", ascending=False).head(20)
 
-    st.subheader(f"🍽️ Top Foods for: {selected_disease}")
+    st.subheader(f"Top Foods for: {selected_disease}")
     # Only include columns that are actually in the DataFrame
     display_cols = ['name', 'serving_size', 'disease_score']
     for col in condition['maximize'] + condition['minimize']:
@@ -374,9 +374,9 @@ if selected_disease:
     st.dataframe(disease_results[display_cols].reset_index(drop=True), height=250)
 
 # -------------------------------
-# 📊 Radar Plot of Top 5 Foods
+# Radar Plot of Top 5 Foods
 # -------------------------------
-st.subheader("📊 Nutrient Profile Radar Chart (Top 5 Foods)")
+st.subheader("Nutrient Profile Radar Chart (Top 5 Foods)")
 
 # Select only valid nutrient columns from 'maximize' list
 nutrients_to_plot = [nut for nut in condition["maximize"] if nut in df_copy.columns]
