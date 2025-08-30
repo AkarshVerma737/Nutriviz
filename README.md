@@ -1,6 +1,6 @@
-# 🥗 NutriViz: Interactive Nutritional Insights
+# NutriViz: Interactive Nutritional Insights
 
-## 📌 Overview
+## Overview
 
 **NutriViz** is a Streamlit-based visual analytics dashboard built as a project for the course **Big Data Visual Analytics**. It aims to simplify the complexity of nutritional data, enabling users to explore over **8,800 foods** interactively.
 
@@ -12,7 +12,7 @@ Through a data-driven interface, NutriViz allows users to:
 
 ---
 
-## 📊 Data Source
+## Data Source
 
 The nutritional dataset used in this project was obtained from Kaggle:  
 🔗 [Nutrition Dataset – Kaggle](https://www.kaggle.com/datasets/gokulprasantht/nutrition-dataset
@@ -20,7 +20,7 @@ The nutritional dataset used in this project was obtained from Kaggle:
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Interactive Charts**: Radar plots, bar charts, PCA, t-SNE, scatterplots, treemaps, and more
 - **Search & Filter**: Search by food name, filter by category or health needs
@@ -29,7 +29,7 @@ The nutritional dataset used in this project was obtained from Kaggle:
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Purpose                 | Libraries & Tools                             |
 |-------------------------|-----------------------------------------------|
@@ -40,7 +40,7 @@ The nutritional dataset used in this project was obtained from Kaggle:
 
 ---
 
-## 💡 How to Run Locally
+## How to Run Locally
 
 Follow these steps to set up and run NutriViz on your system:
 
@@ -79,7 +79,7 @@ Follow these steps to set up and run NutriViz on your system:
 
 - This will launch the Streamlit app in your browser. The homepage will guide you through the available visualizations and tools.
 
-📊 **Pages Description**
+**Pages Description**
 
 Each Python file in the pages/ directory represents a dedicated feature module:
 
@@ -95,7 +95,7 @@ Each Python file in the pages/ directory represents a dedicated feature module:
 | `Calorie_Macro_Calculator.py`              | Estimate calorie intake from macronutrient breakdown  |
 
 
-📈 **Example Use Cases**
+**Example Use Cases**
 
 - A diabetic patient exploring low-sugar, high-fiber foods
 
@@ -103,6 +103,6 @@ Each Python file in the pages/ directory represents a dedicated feature module:
 
 - General users benchmarking healthy snacks vs. “sugar bombs”
 
-🙌 **Acknowledgments**
+**Acknowledgments**
 
 This project was developed as part of CS661: Big Data Visual Analytics at IIT Kanpur.
