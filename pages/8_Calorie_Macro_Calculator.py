@@ -583,7 +583,7 @@ if st.button("Calculate My Macros!", key="calculate_button"):
     # --- Food Recommendation Section ---
     if not df_food_data_clean_macros.empty:
         st.markdown("---")
-        st.subheader("🍽 Daily Food Combination Recommendation")
+        st.subheader("Daily Food Combination Recommendation")
         st.write("Here's a sample daily food combination from your dataset designed to help you hit your macronutrient targets. This is an illustrative example, and actual meal planning requires more detailed consideration.")
 
         # Call the recommendation function
