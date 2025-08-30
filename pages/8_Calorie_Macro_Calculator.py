@@ -9,7 +9,7 @@ import random # For food recommendations
 
 st.set_page_config(layout="wide", page_title="Calorie & Macro Calculator")
 
-st.header("💪 Calorie & Macro Calculator")
+st.header("Calorie & Macro Calculator")
 st.write("Estimate your daily calorie and macronutrient needs based on your goals.")
 
 # --- Calorie Constants ---
@@ -238,7 +238,7 @@ def recommend_food_combination(
 
 
 # --- User Inputs ---
-st.subheader("📊 Your Stats & Goals")
+st.subheader("Your Stats & Goals")
 
 input_container = st.container()
 
@@ -335,7 +335,7 @@ elif diet_type == "Keto":
         
 if diet_type != "Keto":
     st.markdown("---")
-    st.subheader("⚖ Macronutrient Split")
+    st.subheader("Macronutrient Split")
     col_m1, col_m2 = st.columns(2)
     with col_m1:
         protein_g_per_lb = st.selectbox(
@@ -496,7 +496,7 @@ if st.button("Calculate My Macros!", key="calculate_button"):
 
     st.markdown("---")
 
-    st.subheader("⚖ Estimated Weight Change")
+    st.subheader("Estimated Weight Change")
     weight_unit_display = "kg"
     if estimated_weight_change > 0:
         st.info(f"You are estimated to *gain {abs(estimated_weight_change):.2f} {weight_unit_display}* per week based on your calorie target. (Approx. {abs(estimated_weight_change)*2.20462:.2f} lbs)")
@@ -508,7 +508,7 @@ if st.button("Calculate My Macros!", key="calculate_button"):
     st.markdown("---")
 
     # --- Visualization of Macro Distribution (Ternary Plot) ---
-    st.subheader("📊 Macronutrient Distribution Visualization (Ternary Plot)")
+    st.subheader("Macronutrient Distribution Visualization (Ternary Plot)")
     st.write("This plot shows the relative proportions of your target protein, fat, and carbohydrates, allowing for easy comparison with common dietary splits.")
 
     current_macros_for_plot = np.array([protein_perc, fat_perc, carb_perc])
